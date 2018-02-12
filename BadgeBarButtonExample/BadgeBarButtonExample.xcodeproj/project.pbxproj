@@ -12,7 +12,6 @@
 		BCEEB15F20320C9D0022C37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB15D20320C9D0022C37B /* Main.storyboard */; };
 		BCEEB16120320C9D0022C37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB16020320C9D0022C37B /* Assets.xcassets */; };
 		BCEEB16420320C9D0022C37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB16220320C9D0022C37B /* LaunchScreen.storyboard */; };
-		BCEEB16D20320D440022C37B /* NGSBadgeBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEEB16C20320D440022C37B /* NGSBadgeBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		BCEEB16020320C9D0022C37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCEEB16320320C9D0022C37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCEEB16520320C9D0022C37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCEEB16C20320D440022C37B /* NGSBadgeBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGSBadgeBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 		BCEEB15820320C9D0022C37B /* BadgeBarButtonExample */ = {
 			isa = PBXGroup;
 			children = (
-				BCEEB16B20320CDA0022C37B /* Pod */,
 				BCEEB15920320C9D0022C37B /* AppDelegate.swift */,
 				BCEEB15B20320C9D0022C37B /* ViewController.swift */,
 				BCEEB15D20320C9D0022C37B /* Main.storyboard */,
@@ -65,14 +62,6 @@
 				BCEEB16520320C9D0022C37B /* Info.plist */,
 			);
 			path = BadgeBarButtonExample;
-			sourceTree = "<group>";
-		};
-		BCEEB16B20320CDA0022C37B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				BCEEB16C20320D440022C37B /* NGSBadgeBarButton.swift */,
-			);
-			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCEEB16D20320D440022C37B /* NGSBadgeBarButton.swift in Sources */,
 				BCEEB15C20320C9D0022C37B /* ViewController.swift in Sources */,
 				BCEEB15A20320C9D0022C37B /* AppDelegate.swift in Sources */,
 			);
