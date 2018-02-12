@@ -109,6 +109,10 @@ open class NGSBadgeBarButton : UIBarButtonItem
         self.badgeSizeConstraints = sizeConstraints
         
         self.setupObservers()
+        
+        // Let actions go through
+        self.badgeLabel.isUserInteractionEnabled = false
+        self.badgeContainer.isUserInteractionEnabled = false
     }
     
     //MARK:- Private methods
