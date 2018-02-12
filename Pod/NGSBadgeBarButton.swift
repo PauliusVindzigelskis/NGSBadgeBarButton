@@ -10,8 +10,11 @@ import UIKit
 
 open class NGSBadgeBarButton : UIBarButtonItem
 {
+    //MARK:- Public accessible Properties
     public static let kDefaultBadgeInsets = UIEdgeInsetsMake(5, 5, -5, -5)
     public private(set) weak var badgeLabel:UILabel! = nil
+    
+    //MARK:- Private Properties
     private var badgeSizeConstraints:[NSLayoutConstraint] = []
     private weak var badgeContainer:UIView! = nil
     
