@@ -1,5 +1,10 @@
 # NGSBadgeBarButton
 
+[![Version](https://img.shields.io/cocoapods/v/NGSBadgeBarButton.svg)](http://cocoapods.org/pods/NGSBadgeBarButton)
+[![Platform](https://img.shields.io/badge/platform-iOS-blue.svg)](https://github.com/PauliusVindzigelskis/NGSBadgeBarButton)
+[![Language](https://img.shields.io/badge/language-Swift-blue.svg)](https://github.com/PauliusVindzigelskis/NGSBadgeBarButton)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PauliusVindzigelskis/NGSBadgeBarButton/master/LICENSE)
+
 Swift 3.2 and 4.0 compatible
 
 ## Install
