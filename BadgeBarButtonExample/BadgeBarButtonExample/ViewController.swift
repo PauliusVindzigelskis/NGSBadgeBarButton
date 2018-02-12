@@ -14,19 +14,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var imageButton:NGSBadgeBarButton!
     var textButton:NGSBadgeBarButton!
+    var customButton:NGSBadgeBarButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Image Bar Button
         let image = UIImage(named:"burger")!
         let insets = UIEdgeInsetsMake(0, 5, 0, -5)
         self.imageButton = NGSBadgeBarButton(badgeButtonWithImage: image, target: self, selector: #selector(self.burgerPressed(_:)), insets:insets)
         self.imageButton.badgeLabel.font = UIFont.systemFont(ofSize: 10)
-        self.navigationItem.leftBarButtonItem = self.imageButton
         
         
+        // Text Bar Button
         self.textButton = NGSBadgeBarButton(badgeButtonWithTitle: "Customers", target: self, selector: #selector(self.burgerPressed(_:)))
-        self.navigationItem.rightBarButtonItem = self.textButton
+        
+        self.navigationItem.leftBarButtonItems = [self.imageButton, self.textButton]
+        
+        // Custom Bar Button
+        let button = UIButton(type: .custom)
+        button.setTitle("Custom", for: .normal)
+        button.setTitleColor(UIColor.blue, for: .normal)
+        button.setTitleColor(UIColor.red, for: .highlighted)
+        self.customButton = NGSBadgeBarButton(badgeButtonWithCustomView: button)
+        self.navigationItem.rightBarButtonItem = self.customButton
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,6 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         self.imageButton.badgeLabel.text = text
         self.textButton.badgeLabel.text = text
+        self.customButton.badgeLabel.text = text
         return true
     }
     

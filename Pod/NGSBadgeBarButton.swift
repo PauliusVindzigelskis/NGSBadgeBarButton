@@ -28,6 +28,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
     {
         let button = UIButton(type: .custom)
         button.setTitleColor(UIColor.black, for: .normal)
+        button.setTitleColor(UIColor.darkGray, for: .highlighted)
         button.setTitle(text, for: .normal)
         button.addTarget(target, action: selector, for: .touchUpInside)
         self.init(badgeButtonWithCustomView: button, insets:insets)
