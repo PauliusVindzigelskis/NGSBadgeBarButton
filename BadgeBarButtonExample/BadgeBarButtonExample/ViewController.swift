@@ -10,7 +10,8 @@ import UIKit
 import NGSBadgeBarButton
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    @IBOutlet var textField: UITextField!
+    
     var imageButton:NGSBadgeBarButton!
     var textButton:NGSBadgeBarButton!
     
@@ -26,6 +27,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.textButton = NGSBadgeBarButton(badgeButtonWithTitle: "Customers", target: self, selector: #selector(self.burgerPressed(_:)))
         self.navigationItem.rightBarButtonItem = self.textButton
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.textField.becomeFirstResponder()
     }
     
     @objc func burgerPressed(_ sender:Any)
