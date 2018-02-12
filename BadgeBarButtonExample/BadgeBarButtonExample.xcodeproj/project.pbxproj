@@ -13,6 +13,7 @@
 		BCEEB15F20320C9D0022C37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB15D20320C9D0022C37B /* Main.storyboard */; };
 		BCEEB16120320C9D0022C37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB16020320C9D0022C37B /* Assets.xcassets */; };
 		BCEEB16420320C9D0022C37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB16220320C9D0022C37B /* LaunchScreen.storyboard */; };
+		BCEEB16F2032383D0022C37B /* NGSBadgeBarButton.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB16E2032383D0022C37B /* NGSBadgeBarButton.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BCEEB16020320C9D0022C37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCEEB16320320C9D0022C37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCEEB16520320C9D0022C37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCEEB16E2032383D0022C37B /* NGSBadgeBarButton.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NGSBadgeBarButton.podspec; path = ../../NGSBadgeBarButton.podspec; sourceTree = "<group>"; };
 		E0D004A826FE28E6DA093E6F /* Pods-BadgeBarButtonExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeBarButtonExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		BCEEB15820320C9D0022C37B /* BadgeBarButtonExample */ = {
 			isa = PBXGroup;
 			children = (
+				BCEEB16E2032383D0022C37B /* NGSBadgeBarButton.podspec */,
 				BCEEB15920320C9D0022C37B /* AppDelegate.swift */,
 				BCEEB15B20320C9D0022C37B /* ViewController.swift */,
 				BCEEB15D20320C9D0022C37B /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCEEB16420320C9D0022C37B /* LaunchScreen.storyboard in Resources */,
+				BCEEB16F2032383D0022C37B /* NGSBadgeBarButton.podspec in Resources */,
 				BCEEB16120320C9D0022C37B /* Assets.xcassets in Resources */,
 				BCEEB15F20320C9D0022C37B /* Main.storyboard in Resources */,
 			);
