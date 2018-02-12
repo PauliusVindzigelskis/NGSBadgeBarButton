@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NGSBadgeBarButton
 
 class ViewController: UIViewController, UITextFieldDelegate {
 

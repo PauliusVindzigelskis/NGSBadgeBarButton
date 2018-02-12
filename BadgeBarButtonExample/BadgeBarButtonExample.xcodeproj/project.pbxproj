@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A7FBFFF5BA4E5E82F6D0110 /* Pods_BadgeBarButtonExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6919644F09809C1D71858D /* Pods_BadgeBarButtonExample.framework */; };
 		BCEEB15A20320C9D0022C37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEEB15920320C9D0022C37B /* AppDelegate.swift */; };
 		BCEEB15C20320C9D0022C37B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEEB15B20320C9D0022C37B /* ViewController.swift */; };
 		BCEEB15F20320C9D0022C37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCEEB15D20320C9D0022C37B /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D9D3CB36C6FCDEC744024C8 /* Pods-BadgeBarButtonExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeBarButtonExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample.release.xcconfig"; sourceTree = "<group>"; };
+		5B6919644F09809C1D71858D /* Pods_BadgeBarButtonExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgeBarButtonExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEEB15620320C9D0022C37B /* BadgeBarButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeBarButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEEB15920320C9D0022C37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCEEB15B20320C9D0022C37B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		BCEEB16020320C9D0022C37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCEEB16320320C9D0022C37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCEEB16520320C9D0022C37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0D004A826FE28E6DA093E6F /* Pods-BadgeBarButtonExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeBarButtonExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A7FBFFF5BA4E5E82F6D0110 /* Pods_BadgeBarButtonExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02B49F1C69FA8183F72F7100 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B6919644F09809C1D71858D /* Pods_BadgeBarButtonExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97B05AE73FA64AA0A0D63ECA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0D004A826FE28E6DA093E6F /* Pods-BadgeBarButtonExample.debug.xcconfig */,
+				3D9D3CB36C6FCDEC744024C8 /* Pods-BadgeBarButtonExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BCEEB14D20320C9D0022C37B = {
 			isa = PBXGroup;
 			children = (
 				BCEEB15820320C9D0022C37B /* BadgeBarButtonExample */,
 				BCEEB15720320C9D0022C37B /* Products */,
+				97B05AE73FA64AA0A0D63ECA /* Pods */,
+				02B49F1C69FA8183F72F7100 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCEEB16820320C9D0022C37B /* Build configuration list for PBXNativeTarget "BadgeBarButtonExample" */;
 			buildPhases = (
+				A8A5E8B0AF828F5D824E2E6F /* [CP] Check Pods Manifest.lock */,
 				BCEEB15220320C9D0022C37B /* Sources */,
 				BCEEB15320320C9D0022C37B /* Frameworks */,
 				BCEEB15420320C9D0022C37B /* Resources */,
+				EEA2C45526B15D190631E885 /* [CP] Embed Pods Frameworks */,
+				879E1A46CA96AB4498D1F223 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		879E1A46CA96AB4498D1F223 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8A5E8B0AF828F5D824E2E6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BadgeBarButtonExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEA2C45526B15D190631E885 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NGSBadgeBarButton/NGSBadgeBarButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NGSBadgeBarButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCEEB15220320C9D0022C37B /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		BCEEB16920320C9D0022C37B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D004A826FE28E6DA093E6F /* Pods-BadgeBarButtonExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		BCEEB16A20320C9D0022C37B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9D3CB36C6FCDEC744024C8 /* Pods-BadgeBarButtonExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
