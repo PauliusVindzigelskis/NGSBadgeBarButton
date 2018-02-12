@@ -23,10 +23,12 @@ open class NGSBadgeBarButton : UIBarButtonItem
     
     public convenience init(badgeButtonWithImage image:UIImage, target:Any, selector:Selector)
     {
+        // Custom view
         let view = UIView()
-        let fontSize:CGFloat = 12.0
+        let fontSize:CGFloat = 10.0
         let badgeFont = UIFont.systemFont(ofSize: fontSize)
         
+        // Button disguised as UIBarButton
         let button = UIButton(type: .custom)
         button.setImage(image, for: .normal)
         button.addTarget(target, action: selector, for: .touchUpInside)
@@ -38,10 +40,12 @@ open class NGSBadgeBarButton : UIBarButtonItem
             button.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
+        // Badge red container.
         let badgeView = UIView()
         badgeView.backgroundColor = UIColor.red
         badgeView.layer.masksToBounds = true
         
+        // Label to store badge text
         let badge = UILabel()
         badge.textAlignment = .center
         badge.textColor = UIColor.white
@@ -49,6 +53,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
         badgeView.addSubview(badge)
         badge.translatesAutoresizingMaskIntoConstraints = false
         
+        // Badge container stretches with label by x axis. Default insets provided
         let defaultInset = NGSBadgeBarButton.defaultBadgeInset
         let badgeInsetConstraints = [
             badge.topAnchor.constraint(equalTo: badgeView.topAnchor, constant: defaultInset),
@@ -62,32 +67,41 @@ open class NGSBadgeBarButton : UIBarButtonItem
         badgeView.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraints([
             // stick badge on button's right top corner
-            badgeView.centerXAnchor.constraint(equalTo: button.rightAnchor),
+            badgeView.rightAnchor.constraint(equalTo: button.rightAnchor, constant: fontSize),
             badgeView.centerYAnchor.constraint(equalTo: button.topAnchor),
             // close container with badge edges
             badgeView.rightAnchor.constraint(equalTo: view.rightAnchor),
             badgeView.topAnchor.constraint(equalTo: view.topAnchor)
         ])
         
-        //min width
-        badgeView.addConstraint(badgeView.widthAnchor.constraint(greaterThanOrEqualToConstant: fontSize*2))
+        // Round corners
+        badge.text = "0"
+        let compressedSize = badgeView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        badgeView.layer.cornerRadius = compressedSize.height / 2
+        badge.text = nil
         
-        //round corners
-        badgeView.layer.cornerRadius = fontSize
+        // Setup min width to be round by default with short text
+        badgeView.addConstraint(badgeView.widthAnchor.constraint(greaterThanOrEqualToConstant: compressedSize.height))
         
-        view.layoutIfNeeded()
         
+        // Initialize as custom bar button
         self.init(customView: view)
+        
+        // Setup properties
         self.badgeLabel = badge
         self.badgeContainer = badgeView
         self.badgeContainer.isHidden = true
         self.badgeInsetConstraints = badgeInsetConstraints
+        
         self.setupObservers()
     }
     
     private func setupObservers()
     {
+        // Track Badge Value setter
         self.badgeLabel.addObserver(self, forKeyPath: "text", options: .new, context: nil)
+        
+        // Track Badge Insets setter
         self.addObserver(self, forKeyPath: "badgeInsets", options: .new, context: nil)
     }
     
@@ -95,6 +109,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
         
         if keyPath == "text"
         {
+            // Badge Value
             let newValue = self.badgeLabel.text
             if let value = newValue
             {
@@ -105,6 +120,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
             self.badgeLabel.layoutIfNeeded()
         } else if keyPath == "badgeInsets"
         {
+            // Badge Label insets in red container
             self.badgeContainer.removeConstraints(self.badgeInsetConstraints)
             let insets = self.badgeInsets
             let newInsets:[NSLayoutConstraint] = [
