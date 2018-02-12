@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.description      = 'UIBarButton subclass to provide option to set red badge on its corner. AutoLayout in action'
 
   s.homepage         = 'https://github.com/PauliusVindzigelskis/NGSBadgeBarButton'
-  #s.screenshot       = ''
+  s.screenshot       = 'https://user-images.githubusercontent.com/2383901/36121468-e32e9756-100b-11e8-9e64-ddcd0d6e8514.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Paulius Vindzigelskis' => 'p.vindzigelskis@gmail.com' }
   s.source           = { :git => 'https://github.com/PauliusVindzigelskis/NGSBadgeBarButton.git', :tag => _tag }
