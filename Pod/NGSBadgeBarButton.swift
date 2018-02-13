@@ -13,6 +13,17 @@ open class NGSBadgeBarButton : UIBarButtonItem
     //MARK:- Public accessible Properties
     public static let kDefaultBadgeInsets = UIEdgeInsetsMake(5, 5, -5, -5)
     public private(set) weak var badgeLabel:UILabel! = nil
+    public var badgeBackgroundColor:UIColor?
+    {
+        get {
+            return self.badgeContainer.backgroundColor
+        }
+        
+        set (newValue)
+        {
+            self.badgeContainer.backgroundColor = newValue
+        }
+    }
     
     //MARK:- Private Properties
     private var badgeSizeConstraints:[NSLayoutConstraint] = []

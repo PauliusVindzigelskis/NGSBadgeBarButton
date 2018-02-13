@@ -38,6 +38,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         button.setTitleColor(UIColor.red, for: .highlighted)
         self.customButton = NGSBadgeBarButton(badgeButtonWithCustomView: button)
         self.navigationItem.rightBarButtonItem = self.customButton
+        self.customButton.badgeBackgroundColor = UIColor.green
+        self.customButton.badgeLabel.textColor = UIColor.blue
     }
     
     override func viewDidAppear(_ animated: Bool) {
