@@ -31,14 +31,20 @@ open class NGSBadgeBarButton : UIBarButtonItem
     
     //MARK:- Public API
     
-    public convenience init(badgeButtonWithImage image:UIImage, target:Any, selector:Selector, insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
+    public convenience init(badgeButtonWithImage image:UIImage,
+                            target:Any,
+                            selector:Selector,
+                            insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
     {
         let button = UIButton(type: .custom)
         button.setImage(image, for: .normal)
         button.addTarget(target, action: selector, for: .touchUpInside)
         self.init(badgeButtonWithCustomView: button, insets:insets)
     }
-    public convenience init(badgeButtonWithTitle text:String, target:Any, selector:Selector, insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
+    public convenience init(badgeButtonWithTitle text:String,
+                            target:Any,
+                            selector:Selector,
+                            insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
     {
         let button = UIButton(type: .custom)
         button.setTitleColor(UIColor.black, for: .normal)
@@ -48,7 +54,8 @@ open class NGSBadgeBarButton : UIBarButtonItem
         self.init(badgeButtonWithCustomView: button, insets:insets)
     }
     
-    public convenience init(badgeButtonWithCustomView customView:UIView, insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
+    public convenience init(badgeButtonWithCustomView customView:UIView,
+                            insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
     {
         // Custom view
         let view = UIView()
