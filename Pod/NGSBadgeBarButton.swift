@@ -7,12 +7,57 @@
 //
 
 import UIKit
-
+/**
+    Custom UIBarButtonItem subclass with added Badge on corner.
+ 
+    Parameters:
+    - kDefaultBadgeInsets : UIEdgeInsets
+    - badgeLabel : UILabel
+    - badgeBackgroundColor : UIColor
+ 
+    Use these designated initializers to access badge properties:
+ 
+    ```
+    init(badgeButtonWithImage: UIImage,
+                       target: Any,
+                     selector: Selector,
+                     position: CGPoint, //Optional
+                       insets: UIEdgeInsets //Optional
+    )
+ 
+    init(badgeButtonWithTitle: String,
+                       target: Any,
+                     selector: Selector,
+                     position: CGPoint, //Optional
+                       insets: UIEdgeInsets //Optional
+    )
+ 
+    init(badgeButtonWithTitle: String,
+                       target: Any,
+                     selector: Selector,
+                     position: CGPoint, //Optional
+                       insets: UIEdgeInsets //Optional
+    )
+ 
+    ```
+*/
 open class NGSBadgeBarButton : UIBarButtonItem
 {
     //MARK:- Public accessible Properties
+    
+/**
+     Default Badge Bar Button insets
+*/
     public static let kDefaultBadgeInsets = UIEdgeInsetsMake(5, 5, -5, -5)
+    
+/**
+     Read only access to Badge Label to control text color, font and text itself
+*/
     public private(set) weak var badgeLabel:UILabel! = nil
+    
+/**
+     The color of badge bubble. Defaults to Red
+*/
     public var badgeBackgroundColor:UIColor?
     {
         get {
@@ -31,6 +76,18 @@ open class NGSBadgeBarButton : UIBarButtonItem
     
     //MARK:- Public API
     
+/**
+     Badge Bar Button with Image
+     
+     - parameter image: Button image
+     - parameter target: The object that receives the action message
+     - parameter selector: The action to send to target when this item is selected
+     - parameter position: Reposition badge in relation to button's top right corner. Default is CGPoint.zero
+     - parameter insets: Badge text (label) insets inside it's bubble (red container). Default is (5, 5, -5, -5)
+     
+     - note: Pass template image to react to tint color
+*/
+    
     public convenience init(badgeButtonWithImage image:UIImage,
                             target:Any,
                             selector:Selector,
@@ -42,6 +99,17 @@ open class NGSBadgeBarButton : UIBarButtonItem
         button.addTarget(target, action: selector, for: .touchUpInside)
         self.init(badgeButtonWithCustomView: button, position:position, insets:insets)
     }
+    
+/**
+     Badge Bar Button with Text
+     
+     - parameter text: Button text
+     - parameter target: The object that receives the action message
+     - parameter selector: The action to send to target when this item is selected
+     - parameter position: Reposition badge in relation to button's top right corner. Default is CGPoint.zero
+     - parameter insets: Badge text (label) insets inside it's bubble (red container). Default is (5, 5, -5, -5)
+*/
+    
     public convenience init(badgeButtonWithTitle text:String,
                             target:Any,
                             selector:Selector,
@@ -55,6 +123,14 @@ open class NGSBadgeBarButton : UIBarButtonItem
         button.addTarget(target, action: selector, for: .touchUpInside)
         self.init(badgeButtonWithCustomView: button, position:position, insets:insets)
     }
+    
+/**
+     Badge Bar Button with custom view
+     
+     - parameter customView: A custom view representing the item
+     - parameter position: Reposition badge in relation to button's top right corner. Default is CGPoint.zero
+     - parameter insets: Badge text (label) insets inside it's bubble (red container). Default is (5, 5, -5, -5)
+*/
     
     public convenience init(badgeButtonWithCustomView customView:UIView,
                             position:CGPoint = .zero,
