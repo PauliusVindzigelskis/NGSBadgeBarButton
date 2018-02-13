@@ -31,15 +31,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.navigationItem.leftBarButtonItems = [self.imageButton, self.textButton]
         
-        // Custom Bar Button
+        // Custom Bar Button with repositioned badge
         let button = UIButton(type: .custom)
         button.setTitle("Custom", for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.setTitleColor(UIColor.red, for: .highlighted)
-        self.customButton = NGSBadgeBarButton(badgeButtonWithCustomView: button)
+        
+        let reposition = CGPoint(x: 10, y: -10)
+        self.customButton = NGSBadgeBarButton(badgeButtonWithCustomView: button, position:reposition)
         self.navigationItem.rightBarButtonItem = self.customButton
         self.customButton.badgeBackgroundColor = UIColor.green
         self.customButton.badgeLabel.textColor = UIColor.blue
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

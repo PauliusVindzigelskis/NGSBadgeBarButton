@@ -34,16 +34,18 @@ open class NGSBadgeBarButton : UIBarButtonItem
     public convenience init(badgeButtonWithImage image:UIImage,
                             target:Any,
                             selector:Selector,
+                            position:CGPoint = .zero,
                             insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
     {
         let button = UIButton(type: .custom)
         button.setImage(image, for: .normal)
         button.addTarget(target, action: selector, for: .touchUpInside)
-        self.init(badgeButtonWithCustomView: button, insets:insets)
+        self.init(badgeButtonWithCustomView: button, position:position, insets:insets)
     }
     public convenience init(badgeButtonWithTitle text:String,
                             target:Any,
                             selector:Selector,
+                            position:CGPoint = .zero,
                             insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
     {
         let button = UIButton(type: .custom)
@@ -51,10 +53,11 @@ open class NGSBadgeBarButton : UIBarButtonItem
         button.setTitleColor(UIColor.darkGray, for: .highlighted)
         button.setTitle(text, for: .normal)
         button.addTarget(target, action: selector, for: .touchUpInside)
-        self.init(badgeButtonWithCustomView: button, insets:insets)
+        self.init(badgeButtonWithCustomView: button, position:position, insets:insets)
     }
     
     public convenience init(badgeButtonWithCustomView customView:UIView,
+                            position:CGPoint = .zero,
                             insets:UIEdgeInsets = NGSBadgeBarButton.kDefaultBadgeInsets)
     {
         // Custom view
@@ -97,8 +100,8 @@ open class NGSBadgeBarButton : UIBarButtonItem
         badgeView.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraints([
             // stick badge on button's right top corner
-            badgeView.rightAnchor.constraint(equalTo: customView.rightAnchor, constant: fontSize),
-            badgeView.centerYAnchor.constraint(equalTo: customView.topAnchor),
+            badgeView.rightAnchor.constraint(equalTo: customView.rightAnchor, constant: fontSize + position.x),
+            badgeView.centerYAnchor.constraint(equalTo: customView.topAnchor, constant: position.y),
             // close container with badge edges
             badgeView.rightAnchor.constraint(equalTo: view.rightAnchor),
             badgeView.topAnchor.constraint(equalTo: view.topAnchor)
