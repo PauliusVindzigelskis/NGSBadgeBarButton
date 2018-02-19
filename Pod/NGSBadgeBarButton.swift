@@ -196,6 +196,10 @@ open class NGSBadgeBarButton : UIBarButtonItem
         ]
         badgeView.addConstraints(sizeConstraints)
         
+        // iOS 10 and below doesn't adjust with Auto Layout automagically
+        let initialViewSize = view.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        view.frame = CGRect(origin: .zero, size: initialViewSize)
+        
         // Initialize as custom bar button
         self.init(customView: view)
         
