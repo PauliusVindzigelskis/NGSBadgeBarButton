@@ -53,6 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @objc func burgerPressed(_ sender:Any)
     {
         //empty implementation
+        self.dismiss(animated: true, completion: nil)
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

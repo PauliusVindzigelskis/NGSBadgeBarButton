@@ -250,6 +250,16 @@ open class NGSBadgeBarButton : UIBarButtonItem
         self.addObserver(self, forKeyPath: "badgeInsets", options: .new, context: nil)
     }
     
+    deinit {
+        if let label = self.badgeLabel
+        {
+            label.removeObserver(self, forKeyPath: "text")
+            label.removeObserver(self, forKeyPath: "font")
+        }
+
+        self.removeObserver(self, forKeyPath: "badgeInsets")
+    }
+    
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         if keyPath == "text"
