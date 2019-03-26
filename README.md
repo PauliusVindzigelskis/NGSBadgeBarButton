@@ -5,7 +5,11 @@
 [![Language](https://img.shields.io/badge/language-Swift-blue.svg)](https://github.com/PauliusVindzigelskis/NGSBadgeBarButton)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PauliusVindzigelskis/NGSBadgeBarButton/master/LICENSE)
 
-Swift 3.2 and 4.0 compatible
+v1.1 Swift 3.2
+
+v1.2 Swift 4.0
+
+v1.3 Swift 5
 
 ## Install
 
