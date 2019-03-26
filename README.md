@@ -5,9 +5,9 @@
 [![Language](https://img.shields.io/badge/language-Swift-blue.svg)](https://github.com/PauliusVindzigelskis/NGSBadgeBarButton)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PauliusVindzigelskis/NGSBadgeBarButton/master/LICENSE)
 
-v1.1 Swift 3.2
+v1.1 Swift 3.2 & 4.0
 
-v1.2 Swift 4.0
+v1.2 Swift 4.0, 4.2 & 5.0
 
 v1.3 Swift 5
 
