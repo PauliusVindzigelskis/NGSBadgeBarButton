@@ -1,4 +1,4 @@
-_release = "1.2"
+_release = "1.3"
 _build = "0"
 
 _version = _release + "." + _build #e.x. 1.2.3
@@ -7,7 +7,7 @@ _tag = "R" + _release + "/" + _version #e.x. R1.2/1.2.3
 Pod::Spec.new do |s|
   s.name             = 'NGSBadgeBarButton'
   s.version          = _version
-  s.swift_version    = '4.0'
+  s.swift_version    = '5.0'
   s.summary          = 'UIBarButton with red badge in corner'
   s.description      = 'UIBarButton subclass to provide option to set red badge on its corner. AutoLayout in action'
 

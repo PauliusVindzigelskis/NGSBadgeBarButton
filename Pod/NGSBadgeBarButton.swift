@@ -48,7 +48,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
 /**
      Default Badge Bar Button insets
 */
-    public static let kDefaultBadgeInsets = UIEdgeInsetsMake(5, 5, -5, -5)
+    public static let kDefaultBadgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: -5, right: -5)
     
 /**
      Read only access to Badge Label to control text color, font and text itself
@@ -185,7 +185,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
         
         // Round corners
         badge.text = "0"
-        let compressedSize = badgeView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        let compressedSize = badgeView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         badgeView.layer.cornerRadius = compressedSize.height / 2
         badge.text = nil
         
@@ -197,7 +197,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
         badgeView.addConstraints(sizeConstraints)
         
         // iOS 10 and below doesn't adjust with Auto Layout automagically
-        let initialViewSize = view.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        let initialViewSize = view.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         view.frame = CGRect(origin: .zero, size: initialViewSize)
         
         // Initialize as custom bar button
@@ -227,7 +227,7 @@ open class NGSBadgeBarButton : UIBarButtonItem
         badgeView.removeConstraints(self.badgeSizeConstraints)
         // Round corners
         badge.text = "0"
-        let compressedSize = badgeView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        let compressedSize = badgeView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         badgeView.layer.cornerRadius = compressedSize.height / 2
         
         // Setup min width to be round by default with short text
