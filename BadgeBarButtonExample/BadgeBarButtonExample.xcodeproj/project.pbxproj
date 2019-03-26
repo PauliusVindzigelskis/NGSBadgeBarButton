@@ -103,7 +103,6 @@
 				BCEEB15320320C9D0022C37B /* Frameworks */,
 				BCEEB15420320C9D0022C37B /* Resources */,
 				EEA2C45526B15D190631E885 /* [CP] Embed Pods Frameworks */,
-				879E1A46CA96AB4498D1F223 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,21 +162,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		879E1A46CA96AB4498D1F223 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A8A5E8B0AF828F5D824E2E6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +186,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NGSBadgeBarButton/NGSBadgeBarButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -211,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadgeBarButtonExample/Pods-BadgeBarButtonExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -366,7 +350,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ngs.demo.BadgeBarButtonExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -382,7 +366,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ngs.demo.BadgeBarButtonExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

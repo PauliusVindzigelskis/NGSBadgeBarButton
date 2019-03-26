@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Image Bar Button
         let image = UIImage(named:"burger")!
-        let insets = UIEdgeInsetsMake(0, 5, 0, -5)
+        let insets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
         self.imageButton = NGSBadgeBarButton(badgeButtonWithImage: image, target: self, selector: #selector(self.burgerPressed(_:)), insets:insets)
         self.imageButton.badgeLabel.font = UIFont.systemFont(ofSize: 10)
         
